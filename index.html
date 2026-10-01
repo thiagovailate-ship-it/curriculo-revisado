@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fulano de Tal - Engenheiro de Software</title>
+<style>
+  :root { --text: #1f2933; --muted: #52606d; --accent: #1e3a5f; --line: #d9dee3; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #eceff1;
+    color: var(--text);
+    font-family: Arial, "Helvetica Neue", sans-serif;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+  .page {
+    max-width: 794px;
+    min-height: 1000px;
+    margin: 24px auto;
+    background: #fff;
+    padding: 48px 56px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.12);
+  }
+  header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--accent);
+  }
+  #profile-image {
+    width: 104px; height: 104px;
+    object-fit: cover;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  h1 { margin: 0; font-size: 28px; color: var(--accent); letter-spacing: .01em; }
+  .title { margin: 2px 0 10px; font-size: 16px; color: var(--muted); }
+  .contact { margin: 0; font-size: 14px; color: var(--text); }
+  .contact span + span::before { content: "|"; margin: 0 10px; color: var(--line); }
+  section { margin-top: 26px; }
+  h2 {
+    margin: 0 0 10px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--line);
+    font-size: 13px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .row { display: flex; justify-content: space-between; gap: 16px; }
+  .row strong { font-size: 15px; }
+  .row .meta { color: var(--muted); font-size: 14px; white-space: nowrap; }
+  .org { color: var(--muted); margin: 0 0 6px; }
+  p { margin: 0 0 6px; }
+  ul { margin: 6px 0 0; padding-left: 20px; }
+  @media (max-width: 640px) {
+    .page { margin: 0; padding: 28px 22px; box-shadow: none; }
+    header { flex-direction: column; text-align: center; }
+    .contact span { display: block; }
+    .contact span + span::before { content: none; }
+    .row { flex-direction: column; gap: 0; }
+  }
+  @media print {
+    @page { size: A4; margin: 0; }
+    body { background: #fff; }
+    .page { margin: 0; box-shadow: none; max-width: none; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <img id="profile-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_Tm1kqATsHIgdGhumdWF1yHshIwkTEjPecdz6pTvZ_A&s=10" alt="Foto de Fulano de Tal">
+    <div>
+      <h1>Fulano de Tal</h1>
+      <div class="title">Engenheiro de Software</div>
+      <p class="contact">
+        <span>fulaninho.de.talzinho123@example.com</span><span>(123) 456-7890</span>
+      </p>
+    </div>
+  </header>
+
+  <section>
+    <h2>Resumo Profissional</h2>
+    <p>Engenheiro de Software em nível sênior, atuando no desenvolvimento das principais ferramentas da Google. Graduando em Análise e Desenvolvimento de Sistemas.</p>
+  </section>
+
+  <section>
+    <h2>Experiência Profissional</h2>
+    <div class="row">
+      <strong>Dev Sênior &ndash; Engenheiro de Software</strong>
+    </div>
+    <p class="org">Google</p>
+    <ul>
+      <li>Atuação no desenvolvimento das principais ferramentas da Google.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Formação Acadêmica</h2>
+    <div class="row">
+      <strong>Análise e Desenvolvimento de Sistemas (ADS)</strong>
+      <span class="meta">Conclusão prevista: 2029</span>
+    </div>
+    <p class="org">Faculdade Municipal de Palhoça</p>
+  </section>
+</div>
+</body>
+</html>
